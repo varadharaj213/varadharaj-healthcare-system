@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Invoice</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<header>
+
+			<h1>Medical Prescription </br> <br>by Shaji Hospital</h1>
+			<address>
+				<p>T.Nagar</p>
+				<p>101,Busstand opp<br>Arcot-632503</p>
+				<p>Ph:9894143104</p>
+			</address>
+			<span><img alt="" src="http://www.jonathantneal.com/examples/invoice/logo.png"><input type="file" accept="image/*"></span>
+		</header>
+		<article>
+			<h1>Recipient</h1>
+			<address>
+			<img src="caduceus.jpg" style="width:128px;height:128px;">
+			</address>
+			<br>
+			<table class="meta" >
+				<tr>
+					<th><span>Place</span></th>
+					<td><span contenteditable ></span></td>
+				</tr>
+				
+				<tr>
+					<th><span>Date</span></th>
+					<td><span id='p1'></span></td>
+				</tr>
+				<script>
+	var date = new Date();
+	var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+	document.getElementById("p1").innerHTML = current_date;
+</script>
+				<tr>
+					<th><span>Time</span></th>
+					<td><span id="p2"></span></td>
+				</tr>
+				<script>
+	var date = new Date();
+	var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
+	document.getElementById("p2").innerHTML = current_time;
+</script>
+
+		
+ </table>
+ 	
+			<br><br><br><br><br><br><br><br><br>
+			
+			<br><form> <br> 
+    Patient Name:<input type="text" name="name" placeholder="Enter Your Name"/> <br/>  <br>
+    Patient Age:  <input type="text" name="age" placeholder="Enter Your Age"/> <br/>  <br>
+	 
+	Patient Address:  <textarea rows="2" cols="20" placeholder="Enter Your Address" ></textarea> <br/> 
+ </form><br>
+ <label for="medcine">Medicine Name:</label>
+<select name="medicine" id="m1">
+  <optgroup label="Adult">
+    <option>Advil 800 mg</option>
+    <option>dollobar 30 mg</option>
+	<option>coldact 350 mg</option>
+	<option>Meftal spas  350 mg</option>
+	<option>Gentamicin drops 5g</option>
+  </optgroup>
+  <optgroup label="Child">
+    <option>Advil 400 mg</option>
+    <option>dollobar 15 mg</option>
+  </optgroup>
+</select><br><br><br>
+Signature:
+ <br><br><br>
+			<table class="balance">
+				<tr>
+					<th><span>Ph.no:</span></th>
+					<td><span contenteditable></span></td>
+				</tr>
+				
+				<tr>
+					<th><span>No. of days</span></th>
+					<td><select name="cars" id="cars">
+    <option >For 2 days</option>
+    <option >For 3 days</option>
+    <option >For 4 days</option>
+   
+ </td>
+				</tr>
+				<tr>
+					<th><span>Signed by:</span></th>
+					<td><span>Dr.Shajitha(M.B.B.S)</span></td>
+				</tr>
+			</table>
+			<img align="center" src="man.jpeg" style="width:128px;height:128px;">
+		</article>
+		
+		<aside>
+			<h1><span >Instructions</span></h1>
+			<div >
+				<p>1.Dont Give Fake Details.</p>
+				<p>2.Use aadhar card for verification.</p>
+				<p>3.Dont Misuse this prescription,otherwise we take severe action.</p>
+				<p>4.Medical shop owner need to verify the aadhar card of the customer.</p>
+			</div>
+		</aside><br><br>
+		<button align="right"type:"button" value="print" onclick="window.print()">>>Click here to Print<< </button>
+	</body>
+	
+</html>
